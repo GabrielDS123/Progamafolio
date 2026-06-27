@@ -28,6 +28,12 @@ body{
     --contact-color: #0EA5E9;
 }
 
+/* accent color for keywords (matches hero subtitle) */
+.accent{
+    color: var(--skills-color);
+    font-weight:600;
+}
+
 /* ===========================
    NAVBAR
 =========================== */
@@ -501,6 +507,7 @@ section::before{
 .text h3{
 
     text-align:left;
+    color: #2563EB;
 }
 
 .sobre-mim{
