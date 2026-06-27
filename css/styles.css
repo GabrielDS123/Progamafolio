@@ -42,11 +42,11 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 0;
+    padding:12px 0;
 }
 
 .logo{
-    width:70px;
+    width:56px;
     cursor:pointer;
 }
 
@@ -60,11 +60,30 @@ nav ul li a{
     color:white;
     text-decoration:none;
     font-weight:500;
+    padding-bottom:6px;
+    position:relative;
     transition:.3s;
 }
 
-nav ul li a:hover{
+nav ul li a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0;
+    height:2px;
+    background:#2563EB;
+    transition:width .3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active{
     color:#3B82F6;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after{
+    width:100%;
 }
 
 #btn-cnt{
@@ -90,12 +109,12 @@ nav ul li a:hover{
     width:90%;
     margin:auto;
     min-height:100vh;
-    padding-top:120px;
+    padding-top:100px;
 
     display:flex;
     justify-content:space-between;
-    align-items:center;
-    gap:40px;
+    align-items:flex-start;
+    gap:32px;
 }
 
 .hero-content{
@@ -103,7 +122,7 @@ nav ul li a:hover{
     display:flex;
     flex-direction:column;
     align-items:flex-start;
-    gap:24px;
+    gap:10px;
 }
 
 .hero-img{
@@ -127,7 +146,7 @@ nav ul li a:hover{
 }
 
 .hero-text{
-    max-width:600px;
+    max-width:700px;
 }
 
 .ola{
@@ -144,15 +163,47 @@ nav ul li a:hover{
     color: #2563EB;
 }
 .apresentacao{
-    font-size:18px;
+    font-size:20px;
     color:#94A3B8;
-    margin-bottom:40px;
+    margin-bottom:16px;
 }
 
 .hero-actions{
     display:flex;
-    gap:20px;
+    gap:16px;
     flex-wrap:wrap;
+    margin-top:0;
+}
+
+.hero-socials{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-top:4px;
+}
+
+.social-link{
+    width:44px;
+    height:44px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:rgba(255,255,255,0.08);
+    color:#fff;
+    border:1px solid rgba(255,255,255,0.12);
+    transition:0.3s ease;
+}
+
+.social-link:hover{
+    transform:translateY(-3px);
+    background:#2563EB;
+    color:white;
+}
+
+.social-link svg{
+    width:20px;
+    height:20px;
 }
 
 @media (max-width: 768px){
