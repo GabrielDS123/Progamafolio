@@ -1,113 +1,95 @@
 <!DOCTYPE html>
-<html lang="Pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProgramaFolio</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <div class =”navbar” role=”navegation”>
-             <nav>
-
-                 <img src=”logo” alt=”logo” class=”logo”>
-
+        <div class="navbar" role="navigation">
+            <nav>
+                <img src="img/logo.png" alt="logo" class="logo">
                 <ul>
-
-                 <li><a href=”#”>Home</a></li> 
-
-                 <li><a href=”#”>Skills</a></li>
-
-                 <li><a href= “#”>Sobre mim></a></li>
-
-                 <li><a href=”#”>Contato></a></li>
-
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Sobre mim</a></li>
+                    <li><a href="#">Contato</a></li>
                 </ul>
-                 <button id=”btn-cnt”>Baixar meu Cv </button>
-             </nav>
-
-         </div>
-
+                <button id="btn-cnt">Baixar meu Cv</button>
+            </nav>
+        </div>
     </header>
 
-   <!— hero —>
-
-  <div class= “hero”
-         <div class=”hero-img”>
-
-              <img src=”img” alt=”minha-foto”> 
-
-         </div>
-
-         <div class= “hero-text”>
-         <p class=”ola”>Ola, <br>
-             <h1>Gabriel David</h1>
-         </p>
-         <p class= “apresentacao”> 
-              Desenvolvedor web e Suporte de T.I 
-        </p>
-
+    <!-- hero -->
+    <div class="hero">
+        <div class="hero-img">
+            <img src="img/ft.png" alt="minha-foto">
         </div>
-        <div class= “hero-actions”>
-             <button id= “btn-contato> 
-               Entre contato
-             </button>
-             <button id=”btn-projects”>
-               Ver projetos
-             </button>
-         </div>
-   </div>
 
-    <section class= “skills”>
-         <div class= “programation-skills”>
-             <div class="html">
-                 <h2>html</h2>
-                 <img src="html" alt="html">
-             </div>
-             <div class="Css">
-                 <h2>Css</h2>
-                 <img src="Css" alt="Css">
-             </div>
-             <div class="jvs">
-                 <h2>JavaScript</h2>
-                 <img src="Jvs" alt="jvs">
-             </div>
-             <div class="Java">
-                 <h2>Java</h2>
-                 <img src="Java" alt="Java">
-             </div>
+        <div class="hero-text">
+            <p class="ola">Ola,</p>
+            <h1>Gabriel David</h1>
+            <p class="apresentacao">Desenvolvedor web e Suporte de T.I</p>
+        </div>
+
+        <div class="hero-actions">
+            <button id="btn-contato">Entre contato</button>
+            <button id="btn-projects">Ver projetos</button>
+        </div>
+    </div>
+
+    <section class="skills">
+        <div class="programation-skills">
+            <div class="html">
+                <h2>HTML</h2>
+                <img src="img/html.png" alt="html">
+            </div>
+            <div class="css">
+                <h2>CSS</h2>
+                <img src="img/css.png" alt="css">
+            </div>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <img src="img/js.png" alt="javascript">
+            </div>
+            <div class="java">
+                <h2>Java</h2>
+                <img src="img/java.png" alt="java">
+            </div>
         </div>
     </section>
-    <sectoion class="about-me">
+
+    <section class="about-me">
         <div class="text">
-             <h3>Sobre mim</h3>
-             <p class="sobre-mim">
-                 Meu nome é Gabriel David e sou apaixonado por tecnologia e desenvolvimento web. <br>
-                 Estou constantemente estudando novas ferramentas para evoluir como desenvolvedor Full Stack.<br>
-                 Meu foco é criar aplicações organizadas, modernas e intuitivas, sempre buscando escrever código limpo e oferecer uma boa experiência ao usuário.<br>
-                 Além da programação, gosto de aprender sobre design, lógica e desenvolvimento de software para construir projetos cada vez mais completos
+            <h3>Sobre mim</h3>
+            <p class="sobre-mim">
+                Meu nome é Gabriel David e sou apaixonado por tecnologia e desenvolvimento web.<br>
+                Estou constantemente estudando novas ferramentas para evoluir como desenvolvedor Full Stack.<br>
+                Meu foco é criar aplicações organizadas, modernas e intuitivas, sempre buscando escrever código limpo e oferecer uma boa experiência ao usuário.<br>
+                Além da programação, gosto de aprender sobre design, lógica e desenvolvimento de software para construir projetos cada vez mais completos.
             </p>
         </div>
-        <div class="ft"> 
-             <img src="ft.png" alt="ft-minha">
+        <div class="ft">
+            <img src="img/ft.png" alt="ft-minha">
         </div>
     </section>
+
     <section class="contato">
         <div class="tb-comigo">
-             <h3> Vamos trabalhar Juntos</h3>
-                 <p clas="work-me">
-                    Estou disponível para desenvolver sites, landing pages e projetos personalizados. Entre em contato para conversarmos sobre sua ideia.
-                 </p>
+            <h3>Vamos trabalhar juntos</h3>
+            <p class="work-me">
+                Estou disponível para desenvolver sites, landing pages e projetos personalizados. Entre em contato para conversarmos sobre sua ideia.
+            </p>
         </div>
         <div class="form">
-             <form class="client">
-                 <input type="text" placeholder="name">
-                 <input type="email" placeholder="email">
-                 <input type="text" placeholder="mensagem">
-                 <button id="enviar">
-                     envie mensagem 
-                 </button>
-             </form>
+            <form class="client">
+                <input type="text" name="name" placeholder="name">
+                <input type="email" name="email" placeholder="email">
+                <input type="text" name="message" placeholder="mensagem">
+                <button id="enviar">envie mensagem</button>
+            </form>
         </div>
     </section>
 </body>
