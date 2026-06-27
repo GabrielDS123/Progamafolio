@@ -344,7 +344,7 @@ section::before{
 }
 
 .skills{
-    padding-top:120px;
+    padding-top:50px;
 }
 
 .skills .programation-skills div{
@@ -400,6 +400,14 @@ section::before{
     width:80px;
 
     margin-top:20px;
+}
+
+.programation-skills div p{
+
+    margin-top:18px;
+    font-size:16px;
+    color:#cbd5e1;
+    line-height:1.7;
 }
 
 .programation-skills h2{
