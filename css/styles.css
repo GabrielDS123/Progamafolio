@@ -488,15 +488,15 @@ section::before{
 
     margin:auto;
 
-    padding:120px 0;
+    padding:30px 0 100px;
 
     display:flex;
 
-    align-items:center;
+    align-items:flex-start;
 
     justify-content:space-between;
 
-    gap:60px;
+    gap:40px;
 }
 
 .text{
@@ -508,15 +508,18 @@ section::before{
 
     text-align:left;
     color: #2563EB;
+    margin:0 0 12px 0;
+    font-size:28px;
 }
 
-.sobre-mim{
+.sobre-mim{    
+    font-size:20px;
 
-    font-size:18px;
-
-    line-height:34px;
+    line-height:26px;
 
     color:#CBD5E1;
+    text-align:left;
+    max-width:640px;
 }
 
 .ft img{
