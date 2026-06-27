@@ -514,7 +514,7 @@ section::before{
 
 .sobre-mim{    
     font-size:20px;
-
+    width: 380px;
     line-height:26px;
 
     color:#CBD5E1;
@@ -529,6 +529,45 @@ section::before{
     border-radius:20px;
 
     box-shadow:0 0 30px rgba(37,99,235,.4);
+}
+
+.about-card{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:linear-gradient(135deg, rgba(37,99,235,0.12), rgba(2,6,23,0.6));
+    border:1px solid rgba(37,99,235,0.16);
+    padding:12px 14px;
+    border-radius:12px;
+    margin-top:0;
+    width:220px;
+}
+
+.about-card .card-icon{
+    font-size:26px;
+}
+
+.about-card h4{
+    margin:0;
+    font-size:15px;
+    color:#fff;
+}
+
+.about-card p{
+    margin:0;
+    font-size:13px;
+    color:#CBD5E1;
+}
+
+@media(max-width:900px){
+    .about-card{width:100%; max-width:420px;}
+}
+
+.about-cards{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:16px;
 }
 
 /* ===========================
