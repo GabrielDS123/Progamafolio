@@ -361,12 +361,12 @@ section::before{
 
 .programation-skills{
 
-    width:90%;
+    width:min(1100px, 90%);
     margin:auto;
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(auto-fit, minmax(min(100%, 220px), 1fr));
 
     gap:30px;
 }
@@ -384,6 +384,11 @@ section::before{
     transition:.4s;
 
     border:1px solid transparent;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
 }
 
 .programation-skills div:hover{
@@ -398,8 +403,60 @@ section::before{
 .programation-skills img{
 
     width:80px;
+    height:80px;
+    object-fit:contain;
+    margin:10px 0;
+}
 
-    margin-top:20px;
+.programation-skills p{
+    color:#CBD5E1;
+    line-height:1.6;
+    font-size:15px;
+}
+
+@media (max-width: 1024px){
+    .programation-skills{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        gap:24px;
+    }
+}
+
+@media (max-width: 640px){
+    .skills{
+        padding-top:30px;
+    }
+
+    .about-skills{
+        margin-bottom:24px;
+    }
+
+    .about-skills h5{
+        font-size:28px;
+    }
+
+    .about-skills h6{
+        font-size:18px;
+    }
+
+    .habilidades{
+        font-size:16px;
+        padding:0 8px;
+    }
+
+    .programation-skills{
+        width:95%;
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .programation-skills div{
+        padding:24px 20px;
+    }
+
+    .programation-skills img{
+        width:64px;
+        height:64px;
+    }
 }
 
 .programation-skills div p{
