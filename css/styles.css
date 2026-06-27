@@ -484,17 +484,17 @@ section::before{
 
 .about-me{
 
-    width:90%;
+    width:min(1200px,95%);
 
     margin:auto;
 
-    padding:30px 0 100px;
+    padding:50px 0 140px;
 
     display:flex;
 
     align-items:flex-start;
     justify-content:flex-start;
-    gap:28px;
+    gap:32px;
 }
 
 .text{
@@ -511,7 +511,7 @@ section::before{
 }
 
 .sobre-mim{    
-    font-size:18px;
+    font-size:15px;
     line-height:26px;
 
     color:#CBD5E1;
@@ -526,21 +526,13 @@ section::before{
     flex:0 0 auto;
 }
 
-.about-cards{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-    margin-top:0;
-    width:240px;
-}
-
 .ft img{
 
-    width:380px;
+    width:240px;
 
-    border-radius:20px;
+    border-radius:16px;
 
-    box-shadow:0 0 30px rgba(37,99,235,.4);
+    box-shadow:0 0 28px rgba(37,99,235,.38);
 }
 
 .about-card{
@@ -552,7 +544,7 @@ section::before{
     padding:12px 14px;
     border-radius:12px;
     margin-top:0;
-    width:220px;
+    width:100%;
 }
 
 .about-card .card-icon{
@@ -571,15 +563,13 @@ section::before{
     color:#CBD5E1;
 }
 
-@media(max-width:900px){
-    .about-card{width:100%; max-width:420px;}
-}
-
 .about-cards{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:12px;
     margin-top:16px;
+    width:520px;
+    max-width:100%;
 }
 
 /* ===========================
