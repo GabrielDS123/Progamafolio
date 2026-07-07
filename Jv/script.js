@@ -4,20 +4,29 @@ import { db, collection, addDoc } from "./firebase-config.js";
 const menuToggle = document.getElementById("menu-toggle");
 const navMenu = document.getElementById("nav-menu");
 const logoToggle = document.getElementById("logo-toggle");
+const mobileBreakpoint = 640;
 
-function toggleMenu(){
-    menuToggle.classList.toggle("active");
-    navMenu.classList.toggle("active");
+function isMobile() {
+    return window.innerWidth <= mobileBreakpoint;
 }
 
-function closeMenu(){
-    menuToggle.classList.remove("active");
-    navMenu.classList.remove("active");
+function toggleMenu(force) {
+    const shouldOpen = typeof force === "boolean" ? force : !navMenu.classList.contains("active");
+    menuToggle.classList.toggle("active", shouldOpen);
+    navMenu.classList.toggle("active", shouldOpen);
 }
 
-// Abrir/fechar menu ao clicar no hamburger ou logo
-menuToggle.addEventListener("click", toggleMenu);
-logoToggle.addEventListener("click", toggleMenu);
+function closeMenu() {
+    toggleMenu(false);
+}
+
+// Abrir/fechar o menu apenas pela logo no celular
+logoToggle.addEventListener("click", (e) => {
+    if (!isMobile()) return;
+
+    e.stopPropagation();
+    toggleMenu();
+});
 
 // Fechar menu ao clicar em um link
 navMenu.querySelectorAll("a").forEach(link => {
@@ -26,7 +35,13 @@ navMenu.querySelectorAll("a").forEach(link => {
 
 // Fechar menu ao clicar fora
 document.addEventListener("click", (e) => {
-    if(!e.target.closest("nav") && navMenu.classList.contains("active")){
+    if (isMobile() && !e.target.closest("nav") && navMenu.classList.contains("active")) {
+        closeMenu();
+    }
+});
+
+window.addEventListener("resize", () => {
+    if (!isMobile()) {
         closeMenu();
     }
 });

@@ -946,10 +946,6 @@ nav{
     align-items:center;
 }
 
-.menu-toggle{
-    display:flex;
-}
-
 nav ul{
     display:none !important;
     position:absolute;
