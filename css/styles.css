@@ -64,9 +64,13 @@ nav{
 }
 
 nav ul{
-    display:flex;
+    display:none;
     list-style:none;
     gap:35px;
+}
+
+nav ul.active{
+    display:flex !important;
 }
 
 nav ul li a{
@@ -145,10 +149,23 @@ nav ul li a.active::after{
 }
 
 .nav-menu{
-    display:flex !important;
+    display:none;
+    position:absolute;
+    top:60px;
+    left:0;
+    right:0;
+    flex-direction:column;
+    background:rgba(0, 5, 15, 0.95);
+    padding:20px;
+    gap:12px;
+    text-align:center;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    list-style:none;
 }
 
-/* ===========================
+.nav-menu.active{
+    display:flex !important;
+}
    HERO
 =========================== */
 
@@ -948,16 +965,6 @@ nav{
 
 nav ul{
     display:none !important;
-    position:absolute;
-    top:60px;
-    left:0;
-    right:0;
-    flex-direction:column;
-    background:rgba(0, 5, 15, 0.95);
-    padding:20px;
-    gap:12px;
-    text-align:center;
-    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 nav ul.active{
