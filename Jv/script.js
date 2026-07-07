@@ -1,51 +1,5 @@
 import { db, collection, addDoc } from "./firebase-config.js";
 
-// ===== MENU TOGGLE MOBILE =====
-const menuToggle = document.getElementById("menu-toggle");
-const navMenu = document.getElementById("nav-menu");
-const logoToggle = document.getElementById("logo-toggle");
-const mobileBreakpoint = 640;
-
-function isMobile() {
-    return window.innerWidth <= mobileBreakpoint;
-}
-
-function toggleMenu(force) {
-    const shouldOpen = typeof force === "boolean" ? force : !navMenu.classList.contains("active");
-    menuToggle.classList.toggle("active", shouldOpen);
-    navMenu.classList.toggle("active", shouldOpen);
-}
-
-function closeMenu() {
-    toggleMenu(false);
-}
-
-// Abrir/fechar o menu apenas pela logo no celular
-logoToggle.addEventListener("click", (e) => {
-    if (!isMobile()) return;
-
-    e.stopPropagation();
-    toggleMenu();
-});
-
-// Fechar menu ao clicar em um link
-navMenu.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", closeMenu);
-});
-
-// Fechar menu ao clicar fora
-document.addEventListener("click", (e) => {
-    if (isMobile() && !e.target.closest("nav") && navMenu.classList.contains("active")) {
-        closeMenu();
-    }
-});
-
-window.addEventListener("resize", () => {
-    if (!isMobile()) {
-        closeMenu();
-    }
-});
-
 // ===== DOWNLOAD DO CURRÍCULO =====
 const downloadCvBtn = document.getElementById("btn-cnt");
 

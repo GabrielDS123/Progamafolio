@@ -64,13 +64,14 @@ nav{
 }
 
 nav ul{
-    display:none;
+    display:flex;
     list-style:none;
     gap:35px;
+    flex-wrap:wrap;
 }
 
-nav ul.active{
-    display:flex !important;
+.menu-toggle{
+    display:none;
 }
 
 nav ul li a{
@@ -118,7 +119,7 @@ nav ul li a.active::after{
     transform:translateY(-3px);
 }
 
-
+/* ===========================
    HERO
 =========================== */
 
@@ -225,22 +226,23 @@ nav ul li a.active::after{
 
 @media (max-width: 768px){
     .hero{
-        flex-direction:column-reverse;
+        flex-direction:row;
         align-items:flex-start;
-        padding-top:140px;
+        padding-top:100px;
+        gap:32px;
     }
 
     .hero-img{
-        justify-content:center;
-        width:100%;
+        justify-content:flex-end;
+        width:45%;
     }
 
     .hero-content{
-        width:100%;
+        width:auto;
     }
 
     .hero-img img{
-        max-width:100%;
+        max-width:520px;
     }
 }
 
@@ -771,45 +773,45 @@ footer p{
 @media(max-width:900px){
 
 .hero{
-    flex-direction:column-reverse;
-    text-align:center;
-    padding-top:140px;
-    gap:20px;
+    flex-direction:row;
+    text-align:left;
+    padding-top:100px;
+    gap:32px;
 }
 
 .hero-content{
-    flex:1 1 auto;
-    align-items:center;
+    flex:1 1 500px;
+    align-items:flex-start;
 }
 
 .hero-actions{
-    justify-content:center;
+    justify-content:flex-start;
 }
 
 .hero-text{
-    max-width:100%;
+    max-width:700px;
 }
 
 .hero h1{
-    font-size:45px;
+    font-size:60px;
 }
 
 .hero h4{
-    font-size:32px;
+    font-size:42px;
 }
 
 .apresentacao{
-    font-size:18px;
+    font-size:20px;
 }
 
 .hero-img{
-    width:100%;
-    justify-content:center;
+    width:45%;
+    justify-content:flex-end;
 }
 
 .hero-img img{
-    width:280px;
-    max-width:90%;
+    width:100%;
+    max-width:520px;
 }
 
 .about-me{
@@ -917,11 +919,9 @@ nav{
 }
 
 nav ul{
-    display:none !important;
-}
-
-nav ul.active{
-    display:flex !important;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
 }
 
 nav ul li a{
@@ -942,52 +942,53 @@ nav ul li a{
 }
 
 .hero{
-    flex-direction:column-reverse;
-    padding-top:200px;
-    gap:15px;
-    width:95%;
+    flex-direction:row;
+    padding-top:100px;
+    gap:32px;
+    width:90%;
     margin:auto;
 }
 
 .hero-content{
-    align-items:center;
+    align-items:flex-start;
     gap:15px;
 }
 
 .hero-text{
-    text-align:center;
+    text-align:left;
     width:100%;
 }
 
 .hero h1{
-    font-size:40px;
+    font-size:60px;
     margin:10px 0;
 }
 
 .hero h4{
-    font-size:28px;
+    font-size:42px;
     margin-top:5px;
     margin-bottom:15px;
 }
 
 .ola{
-    font-size:18px;
+    font-size:20px;
     margin-bottom:5px;
 }
 
 .apresentacao{
-    font-size:16px;
+    font-size:20px;
     line-height:1.7;
     margin-bottom:20px;
 }
 
 .hero-img img{
-    width:220px;
+    width:100%;
+    max-width:520px;
 }
 
 .hero-actions{
-    flex-direction:column;
-    width:100%;
+    flex-direction:row;
+    width:auto;
     gap:12px;
 }
 
@@ -995,17 +996,17 @@ nav ul li a{
 #btn-projects{
     padding:12px 20px;
     font-size:15px;
-    width:100%;
+    width:auto;
 }
 
 .hero-socials{
-    justify-content:center;
+    justify-content:flex-start;
     gap:12px;
 }
 
 .social-link{
-    width:40px;
-    height:40px;
+    width:44px;
+    height:44px;
 }
 
 section{
