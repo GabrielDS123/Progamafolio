@@ -118,54 +118,7 @@ nav ul li a.active::after{
     transform:translateY(-3px);
 }
 
-/* Menu Hambúrguer */
-.menu-toggle{
-    display:none;
-    flex-direction:column;
-    background:none;
-    border:none;
-    cursor:pointer;
-    gap:5px;
-}
 
-.menu-toggle span{
-    width:25px;
-    height:2.5px;
-    background:#fff;
-    border-radius:2px;
-    transition:.3s;
-}
-
-.menu-toggle.active span:nth-child(1){
-    transform:rotate(45deg) translate(8px, 8px);
-}
-
-.menu-toggle.active span:nth-child(2){
-    opacity:0;
-}
-
-.menu-toggle.active span:nth-child(3){
-    transform:rotate(-45deg) translate(7px, -7px);
-}
-
-.nav-menu{
-    display:none;
-    position:absolute;
-    top:60px;
-    left:0;
-    right:0;
-    flex-direction:column;
-    background:rgba(0, 5, 15, 0.95);
-    padding:20px;
-    gap:12px;
-    text-align:center;
-    border-bottom:1px solid rgba(255,255,255,.08);
-    list-style:none;
-}
-
-.nav-menu.active{
-    display:flex !important;
-}
    HERO
 =========================== */
 
@@ -1030,7 +983,6 @@ nav ul li a{
 
 .hero-img img{
     width:220px;
-    margin-bottom:30px;
 }
 
 .hero-actions{
@@ -1180,24 +1132,37 @@ section h3{
 }
 
 .card-info{
-    padding:32px 20px;
     background:linear-gradient(135deg, rgba(37,99,235,0.12), rgba(2,6,23,0.6));
     border:1px solid rgba(37,99,235,0.16);
+    padding:24px;
     border-radius:16px;
+    transition:.4s;
+}
+
+.card-info:hover{
+    transform:translateY(-5px);
+    border:1px solid rgba(37,99,235,0.3);
+    box-shadow:0 0 25px rgba(37,99,235,.2);
 }
 
 .card-info h4{
-    font-size:20px;
+    color:#fff;
+    font-size:18px;
     margin-bottom:16px;
-    display:block !important;
-    align-items:flex-start !important;
-    gap:0 !important;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.project-list{
+    list-style:none;
+    padding:0;
+    margin:0;
 }
 
 .project-list li{
-    font-size:16px;
-    padding:10px 0;
-    line-height:1.6;
+    color:#CBD5E1;
+    font-size:15px;
 }
 
 .response-text{
