@@ -1,6 +1,18 @@
 import { db, collection, addDoc } from "./firebase-config.js";
 
-// Selecionar o formulário e botão de envio
+// ===== DOWNLOAD DO CURRÍCULO =====
+const downloadCvBtn = document.getElementById("btn-cnt");
+
+downloadCvBtn.addEventListener("click", () => {
+    const link = document.createElement("a");
+    link.href = "curriculo/Curriculo_Gabriel_David_Souza.pdf";
+    link.download = "Curriculo_Gabriel_David_Souza.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+
+// ===== ENVIO DO FORMULÁRIO =====
 const form = document.querySelector(".client");
 const submitBtn = document.getElementById("enviar");
 
