@@ -978,7 +978,7 @@ nav ul li a{
 }
 
 .logo{
-    width:50px;
+    width:70px;
 }
 
 #btn-cnt{
@@ -1003,24 +1003,29 @@ nav ul li a{
 
 .hero-text{
     text-align:center;
+    width:100%;
 }
 
 .hero h1{
-    font-size:32px;
+    font-size:40px;
+    margin:10px 0;
 }
 
 .hero h4{
-    font-size:24px;
-    margin-top:-10px;
+    font-size:28px;
+    margin-top:5px;
+    margin-bottom:15px;
 }
 
 .ola{
-    font-size:16px;
+    font-size:18px;
+    margin-bottom:5px;
 }
 
 .apresentacao{
-    font-size:15px;
-    line-height:1.5;
+    font-size:16px;
+    line-height:1.7;
+    margin-bottom:20px;
 }
 
 .hero-img img{
