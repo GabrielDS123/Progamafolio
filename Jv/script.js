@@ -1,5 +1,36 @@
 import { db, collection, addDoc } from "./firebase-config.js";
 
+// ===== MENU TOGGLE MOBILE =====
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+const logoToggle = document.getElementById("logo-toggle");
+
+function toggleMenu(){
+    menuToggle.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+
+function closeMenu(){
+    menuToggle.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+
+// Abrir/fechar menu ao clicar no hamburger ou logo
+menuToggle.addEventListener("click", toggleMenu);
+logoToggle.addEventListener("click", toggleMenu);
+
+// Fechar menu ao clicar em um link
+navMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+});
+
+// Fechar menu ao clicar fora
+document.addEventListener("click", (e) => {
+    if(!e.target.closest("nav") && navMenu.classList.contains("active")){
+        closeMenu();
+    }
+});
+
 // ===== DOWNLOAD DO CURRÍCULO =====
 const downloadCvBtn = document.getElementById("btn-cnt");
 
