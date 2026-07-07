@@ -761,74 +761,111 @@ footer p{
 }
 
 /* ===========================
-   RESPONSIVIDADE
+   RESPONSIVIDADE - TABLETS (900px e abaixo)
 =========================== */
 
 @media(max-width:900px){
 
 .hero{
+    flex-direction:column-reverse;
+    text-align:center;
+    padding-top:140px;
+    gap:20px;
+}
 
-flex-direction:column-reverse;
-
-text-align:center;
-
-padding-top:140px;
+.hero-content{
+    flex:1 1 auto;
+    align-items:center;
 }
 
 .hero-actions{
+    justify-content:center;
+}
 
-justify-content:center;
+.hero-text{
+    max-width:100%;
 }
 
 .hero h1{
+    font-size:45px;
+}
 
-font-size:45px;
+.hero h4{
+    font-size:32px;
+}
+
+.apresentacao{
+    font-size:18px;
+}
+
+.hero-img{
+    width:100%;
+    justify-content:center;
 }
 
 .hero-img img{
-
-width:280px;
+    width:280px;
+    max-width:90%;
 }
 
 .about-me{
-
-flex-direction:column;
+    flex-direction:column;
+    padding:40px 0;
 }
 
 .text h3{
+    text-align:center;
+}
 
-text-align:center;
+.text{
+    flex:1 1 100%;
+}
+
+.ft{
+    flex-direction:column;
+    width:100%;
 }
 
 .ft img{
+    width:220px;
+    margin:0 auto;
+}
 
-width:280px;
+.about-cards{
+    width:100%;
+    grid-template-columns:1fr;
+    margin-top:20px;
 }
 
 nav{
-
-flex-direction:column;
-
-gap:20px;
+    flex-direction:column;
+    gap:15px;
+    padding:12px;
 }
 
 nav ul{
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
 
-gap:18px;
-
-flex-wrap:wrap;
-
-justify-content:center;
+#btn-cnt{
+    padding:10px 20px;
+    font-size:14px;
 }
 
 .programation-skills{
+    grid-template-columns:repeat(2, 1fr);
+    gap:20px;
+}
 
-grid-template-columns:1fr;
+.programation-skills div{
+    padding:30px 20px;
 }
 
 .contato-container{
     flex-direction:column;
-    gap:24px;
+    gap:30px;
 }
 
 .contato-content{
@@ -837,6 +874,266 @@ grid-template-columns:1fr;
 
 .contato-cards{
     flex:1 1 100%;
+    gap:15px;
+}
+
+.card-info{
+    padding:20px;
+}
+
+.card-info h4{
+    font-size:16px;
+}
+
+.response-text{
+    font-size:28px;
+}
+
+}
+
+/* ===========================
+   RESPONSIVIDADE - MOBILE (640px e abaixo)
+=========================== */
+
+@media(max-width:640px){
+
+header{
+    position:fixed;
+    width:100%;
+    z-index:1000;
+}
+
+nav{
+    flex-direction:column;
+    gap:12px;
+    padding:10px;
+    width:100%;
+}
+
+nav ul{
+    gap:12px;
+    flex-direction:column;
+    text-align:center;
+}
+
+nav ul li a{
+    display:block;
+    padding:8px 0;
+    font-size:14px;
+}
+
+.logo{
+    width:50px;
+}
+
+#btn-cnt{
+    padding:8px 16px;
+    font-size:13px;
+    width:100%;
+}
+
+.hero{
+    flex-direction:column-reverse;
+    padding-top:200px;
+    gap:15px;
+    width:95%;
+    margin:auto;
+}
+
+.hero-content{
+    align-items:center;
+    gap:15px;
+}
+
+.hero-text{
+    text-align:center;
+}
+
+.hero h1{
+    font-size:32px;
+}
+
+.hero h4{
+    font-size:24px;
+    margin-top:-10px;
+}
+
+.ola{
+    font-size:16px;
+}
+
+.apresentacao{
+    font-size:15px;
+    line-height:1.5;
+}
+
+.hero-img img{
+    width:220px;
+}
+
+.hero-actions{
+    flex-direction:column;
+    width:100%;
+    gap:12px;
+}
+
+#btn-contato,
+#btn-projects{
+    padding:12px 20px;
+    font-size:15px;
+    width:100%;
+}
+
+.hero-socials{
+    justify-content:center;
+    gap:12px;
+}
+
+.social-link{
+    width:40px;
+    height:40px;
+}
+
+section{
+    padding:60px 0;
+}
+
+section::before{
+    left:5%;
+    width:90%;
+}
+
+.about-skills h5{
+    font-size:28px;
+}
+
+.about-skills h6{
+    font-size:18px;
+}
+
+.habilidades{
+    font-size:15px;
+    padding:0 10px;
+}
+
+.programation-skills{
+    width:95%;
+    grid-template-columns:1fr;
+    gap:15px;
+}
+
+.programation-skills div{
+    padding:25px 15px;
+}
+
+.programation-skills h2{
+    font-size:22px;
+}
+
+.programation-skills p{
+    font-size:14px;
+}
+
+.about-me{
+    width:95%;
+    padding:40px 0;
+    margin:auto;
+}
+
+.text h3{
+    text-align:center;
+    font-size:26px;
+    margin-bottom:20px;
+}
+
+.sobre-mim{
+    font-size:14px;
+    line-height:1.6;
+}
+
+.ft{
+    width:100%;
+}
+
+.ft img{
+    width:180px;
+}
+
+.about-card{
+    gap:10px;
+    padding:10px 12px;
+}
+
+.about-card h4{
+    font-size:14px;
+}
+
+.about-card p{
+    font-size:12px;
+}
+
+.contato{
+    width:95%;
+    padding:60px 0;
+    margin:auto;
+}
+
+.contato-container{
+    flex-direction:column;
+    gap:20px;
+}
+
+section h3{
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.tb-comigo{
+    margin-bottom:20px;
+}
+
+.work-me{
+    font-size:14px;
+    line-height:1.6;
+}
+
+.client{
+    gap:12px;
+    max-width:100%;
+}
+
+.client input,
+.client textarea{
+    padding:14px;
+    font-size:15px;
+}
+
+#enviar{
+    padding:14px;
+    font-size:16px;
+}
+
+.card-info{
+    padding:18px;
+}
+
+.card-info h4{
+    font-size:16px;
+    margin-bottom:12px;
+}
+
+.project-list li{
+    font-size:14px;
+    padding:6px 0;
+}
+
+.response-text{
+    font-size:24px;
+}
+
+footer{
+    padding:30px 15px;
+    font-size:13px;
 }
 
 }
