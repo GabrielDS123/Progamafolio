@@ -591,6 +591,33 @@ section::before{
     width:min(100%, 520px);
 }
 
+@media (min-width: 1101px){
+    .ft{
+        display:grid;
+        grid-template-columns:minmax(220px, 260px) minmax(0, 1fr);
+        align-items:start;
+        gap:20px;
+    }
+
+    .ft img{
+        width:100%;
+        max-width:260px;
+        margin:0;
+        border-radius:20px;
+    }
+
+    .about-cards{
+        width:100%;
+        margin-top:0;
+        align-self:start;
+    }
+
+    .about-card{
+        padding:14px 16px;
+        min-height:96px;
+    }
+}
+
 /* ===========================
    CONTATO
 =========================== */
