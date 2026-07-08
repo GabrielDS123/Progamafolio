@@ -1,5 +1,38 @@
 import { db, collection, addDoc } from "./firebase-config.js";
 
+// ===== MENU HAMBÚRGUER =====
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+function closeMenu() {
+    if (!menuToggle || !navMenu) return;
+
+    menuToggle.classList.remove("active");
+    navMenu.classList.remove("active");
+    menuToggle.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("menu-open");
+}
+
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", () => {
+        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+        menuToggle.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        document.body.classList.toggle("menu-open", !isExpanded);
+    });
+
+    navMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 768) {
+            closeMenu();
+        }
+    });
+}
+
 // ===== DOWNLOAD DO CURRÍCULO =====
 const downloadCvBtn = document.getElementById("btn-cnt");
 
